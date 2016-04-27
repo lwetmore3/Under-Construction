@@ -18,13 +18,82 @@
 
 				<p>Each time when the game starts, the game will change the values of each crystal.</p>
 			</div>
+	
+		<div id=game>
+		</div>
+	
+	
+<img src="http://placehold.it/150x150" "red()">
+<img src="http://placehold.it/150x150" "blue()">
+<img src="http://placehold.it/150x150" "yellow()">
+<img src="http://placehold.it/150x150" "green()">
 
-<img src="http://placehold.it/150x150" onclick=random.floor "red()">
-<img src="http://placehold.it/150x150" onclick=random.floor "blue()">
-<img src="http://placehold.it/150x150" onclick=random.floor "yellow()">
-<img src="http://placehold.it/150x150" onclick=random.floor "green()">
+<script type="text/javascript"
 
 
+//Captures Button Clicks
 
-</body>
+	var options ="red","blue","yellow","green";
+
+	var wins = 0;
+	var loses = 0;
+
+//Captures Button Clicks 
+	document.onkeyup = function(event) {
+
+//Determines which exact button was selected.
+	var userGuess = String.from CharCode(button.keyCode)
+
+//Alerts with user userGuess
+	console.log(userGuess);
+	
+//Creates code to randomly choose one of the four options (Computer)
+	var computerNumber = options[Math.floor(Math.random()*1-12)];}
+
+//Alerts with computerNumber
+	console.log(computerNumber)
+
+//Covers logic of game
+
+var randomNumber = targetNumber(19,120);
+	
+function targetNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+function targetNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    };
+    
+
+$("red").on("click", function(){
+     total += random1;
+     $(totalscore).html("Your total score is: " + total);
+     check();
+})
+        
+$("blue").on("click", function(){
+     total += random2;
+     $(totalscore).html("Your total score is: " + total);
+     check();
+})
+$("yellow").on("click", function(){
+     total += random3;
+     $(totalscore).html("Your total score is: " + total);
+     check();
+})
+$("green").on("click", function(){
+     total += random4;
+     $(totalscore).html("Your total score is: " + total);
+     check();
+})
+
+//Checks to see if user total score matches the random number
+var check = function() {
+    if (randomGeneratedNumber == total) {
+        wins++;
+        $(winsId).html("Wins: " + wins);
+
+
+		</body>
+	
 </html>
